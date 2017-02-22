@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { RoutingModule } from './routing.module';
-
+import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
@@ -28,7 +28,8 @@ import { InMemoryDataService } from './services/in-memory-data.service';
     FormsModule,
     HttpModule,
     RoutingModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService)
+    InMemoryWebApiModule.forRoot(InMemoryDataService),
+    MaterialModule.forRoot()
   ],
   providers: [HeroService],
   bootstrap: [AppComponent]
